@@ -35,33 +35,33 @@ public class Tc_009_010_ActionsMouseHover_Selecting_option_Header_AddingproductT
 	        Actions action = new Actions(driver);
 	        WebElement Women = driver.findElement(By.xpath(".//nav//ul//li[2]"));
 	        action.moveToElement(Women).build().perform();
-	        Thread.sleep(4000);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	        WebElement Women_Tops = driver.findElement(By.xpath(".//nav//ul//li[2]//ul//li[1]"));
 	        action.moveToElement(Women_Tops).build().perform();
-	        Thread.sleep(4000);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	        WebElement Jacket = driver.findElement(By.xpath(".//nav//ul//li[2]//ul//li[1]//ul//li[1]"));
 	        action.moveToElement(Jacket).click().perform();
-	        Thread.sleep(4000);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	        
 	        driver.findElement(By.xpath("//a[normalize-space()='Juno Jacket']")).click();
 	        
 	        
 	        driver.findElement(By.xpath("//div[@id='option-label-size-143-item-168']")).click();
 	        
-	        Thread.sleep(2000);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	        driver.findElement(By.xpath("//div[@id='option-label-color-93-item-50']")).click();
 	        
-	        Thread.sleep(2000);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	        
 	        driver.findElement(By.xpath("//input[@id='qty']")).clear();
 	        
-	        Thread.sleep(2000);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	        
 	        driver.findElement(By.xpath("//input[@id='qty']")).sendKeys("2");
 	        
 	        driver.findElement(By.xpath("//span[normalize-space()='Add to Cart']")).click();
 	        
-	        Thread.sleep(5000);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	        
 	        String msg = "You added Juno Jacket to your shopping cart.";
 	        

@@ -34,11 +34,11 @@ public class Tc_020_Validate_BreadCrumbs {
 	{
 		driver.findElement(By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]")).click();
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("purnima.sastry10@gmail.com");
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']")).sendKeys("Admin@123");
 		//signIn
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//button[@id='send2']")).click();

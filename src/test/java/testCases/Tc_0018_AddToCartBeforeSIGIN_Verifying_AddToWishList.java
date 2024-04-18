@@ -43,10 +43,10 @@ public class Tc_0018_AddToCartBeforeSIGIN_Verifying_AddToWishList {
 
 		driver.findElement(By.linkText("Karmen Yoga Pant")).click();
 		driver.findElement(By.xpath("(//div[@id='option-label-size-143-item-171'])[1]")).click();
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		driver.findElement(By.xpath("(//div[@id='option-label-color-93-item-49'])[1]")).click();
 		
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		driver.findElement(By.xpath("//input[@id='qty']")).clear();
 		driver.findElement(By.xpath("//input[@id='qty']")).sendKeys("1");
 
@@ -54,7 +54,7 @@ public class Tc_0018_AddToCartBeforeSIGIN_Verifying_AddToWishList {
 
 		System.out.println(driver.getTitle());
 		
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		driver.findElement(By.xpath("//span[normalize-space()='Add to Wish List']")).click();
 		
@@ -66,7 +66,7 @@ public class Tc_0018_AddToCartBeforeSIGIN_Verifying_AddToWishList {
 	{
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("purnima.sastry10@gmail.com");
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']")).sendKeys("Admin@123");
 		//signIn
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//button[@id='send2']")).click();

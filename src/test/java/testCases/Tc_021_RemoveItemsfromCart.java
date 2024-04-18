@@ -44,11 +44,11 @@ public class Tc_021_RemoveItemsfromCart {
 	{
 		driver.findElement(By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]")).click();
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("purnima.sastry10@gmail.com");
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']")).sendKeys("Admin@123");
 		//signIn
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//button[@id='send2']")).click();
@@ -71,7 +71,7 @@ public class Tc_021_RemoveItemsfromCart {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,2000)", "");
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.findElement(By.linkText("Hero Hoodie")).click();
 
@@ -83,14 +83,14 @@ public class Tc_021_RemoveItemsfromCart {
 		blackcolour.click();
 		driver.findElement(By.xpath("//input[@id='qty']")).clear();
 		driver.findElement(By.xpath("//input[@id='qty']")).sendKeys("2");
-		//Thread.sleep(3000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.findElement(By.xpath("//button[@id='product-addtocart-button']")).click(); // AddToCart 
 
 		js.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
 		
-		Thread.sleep(5000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		driver.findElement(By.xpath("(//a[@class='action showcart'])[1]")).click();
-      Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         
         driver.findElement(By.xpath("//a[@title='Remove item']")).click();
        

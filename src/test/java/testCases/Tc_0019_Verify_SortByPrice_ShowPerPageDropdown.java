@@ -40,11 +40,11 @@ public class Tc_0019_Verify_SortByPrice_ShowPerPageDropdown {
 	{
 		driver.findElement(By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]")).click();
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("purnima.sastry10@gmail.com");
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']")).sendKeys("Admin@123");
 		//signIn
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//button[@id='send2']")).click();
@@ -70,7 +70,7 @@ public class Tc_0019_Verify_SortByPrice_ShowPerPageDropdown {
 		js.executeScript("window.scrollBy(0,2000)", "");
 		
 		driver.findElement(By.xpath("//span[normalize-space()='Shop Pants']")).click();		
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		
 	     WebElement staticsortBy = driver.findElement(By.xpath("(//select[@id='sorter'])[1]"));
 	     Select dropdown = new Select(staticsortBy);
@@ -81,7 +81,7 @@ public class Tc_0019_Verify_SortByPrice_ShowPerPageDropdown {
 	     
 	     WebElement showperPage = driver.findElement(By.xpath("(//select[@data-role='limiter'])[2]"));
 	     Select dropdown1 = new Select(showperPage);
-	     Thread.sleep(3000);
+	     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	     dropdown1.selectByVisibleText("36");  
 	     // move to initial position
 	     js.executeScript("window.scrollBy(0,-document.body.scrollHeight)"); 

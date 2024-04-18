@@ -51,7 +51,7 @@ public class Tc_024_VerifyProduct_ByGender_Material {
 		driver.findElement(By.xpath("//a[contains(text(),'Jackets')]")).click();
 		
 		driver.findElement(By.xpath("//div[normalize-space()='Color']")).click();
-		Thread.sleep(1000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		//select color on left panel -- Black
 		driver.findElement(By.xpath("//a[@aria-label='Black']//div[contains(@class,'swatch-option color')]")).click();
 		//click material on left panel -- CoolTech™

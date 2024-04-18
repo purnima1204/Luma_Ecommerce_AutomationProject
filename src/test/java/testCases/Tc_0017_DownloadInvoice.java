@@ -38,11 +38,11 @@ public class Tc_0017_DownloadInvoice {
 	{
 		driver.findElement(By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]")).click();
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("purnima.sastry10@gmail.com");
 
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']")).sendKeys("Admin@123");
 		//signIn
 		driver.findElement(By.xpath("//fieldset[@class='fieldset login']//button[@id='send2']")).click();
@@ -65,7 +65,7 @@ public class Tc_0017_DownloadInvoice {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,2000)", "");
 		
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.findElement(By.linkText("Hero Hoodie")).click();
 		
@@ -86,21 +86,21 @@ public class Tc_0017_DownloadInvoice {
 		
 		driver.findElement(By.xpath("//button[@id='top-cart-btn-checkout']")).click(); // checkout button
 		
-		Thread.sleep(5000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		
 		driver.findElement(By.xpath("//span[normalize-space()='Next']")).click(); // Next button
 		
-		Thread.sleep(4000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		// scroll till place order button is able to click
 		
 		js.executeScript("window.scrollBy(0,2000)", "");
 		driver.findElement(By.xpath("//span[normalize-space()='Place Order']")).click(); // placeorder
 		
-		Thread.sleep(5000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		
 		driver.findElement(By.xpath("//a[@class='action print']")).click(); // print window
 		
-		Thread.sleep(5000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		
 		System.out.println(driver.getTitle()); // success page Title after order is placed
 	}

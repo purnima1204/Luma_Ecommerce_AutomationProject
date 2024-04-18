@@ -3,6 +3,8 @@ package testCases;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -63,7 +65,7 @@ public class Tc_11_RemoveProductFromCart extends BaseClass {
 		driver.findElement(By.id("option-label-size-143-item-167")).click();
 		driver.findElement(By.id("option-label-color-93-item-50")).click();
 		driver.findElement(By.xpath("//*[@id=\"product-addtocart-button\"]")).click();
-		Thread.sleep(3000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		
 		//click on cart button
 		

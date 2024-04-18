@@ -41,7 +41,7 @@ public class Tc_023_AdvanceSearch {
 		System.out.println(driver.getTitle()); // Advance Search
 		// search the product
 		driver.findElement(By.xpath("//input[@id='name']")).sendKeys("Selene Yoga Hoodie");
-		Thread.sleep(2000);
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.findElement(By.cssSelector("button[class='action search primary']")).click();
 		
 		System.out.println(driver.getTitle()); // Advanced Search Results
